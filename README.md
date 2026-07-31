@@ -32,7 +32,6 @@ The sandboxed preview iframe displays the same Elements HTML that users download
 - Unlayer React Elements
 - GitHub REST API
 - Zod validation
-- Vercel Web Analytics
 - Vitest
 
 ## Run locally
@@ -68,20 +67,6 @@ npm run build      # production build
 npm start          # production server
 ```
 
-## Deploy to Vercel
-
-1. Push this repository to GitHub.
-2. In the [Vercel dashboard](https://vercel.com/new), choose **Add New → Project** and import the repository.
-3. Keep the detected Next.js defaults for framework, build command, and output directory.
-4. Optionally add the `GITHUB_TOKEN` environment variable for a higher GitHub rate limit.
-5. Click **Deploy**.
-
-### Web Analytics
-
-Traffic is tracked with [Vercel Web Analytics](https://vercel.com/docs/analytics). The `<Analytics />` component from `@vercel/analytics` is mounted in `app/layout.tsx`, so every route reports page views once analytics is enabled.
-
-To turn it on, open the project in Vercel, go to the **Analytics** tab, and enable **Web Analytics**. Data appears after the next deployment receives production traffic.
-
 ## Architecture
 
 ```text
@@ -110,7 +95,6 @@ Important implementation paths:
 - User payloads are length-limited and validated before rendering.
 - User-authored text is escaped by the Elements renderer.
 - Preview iframes use a restrictive sandbox.
-- Web Analytics collects aggregate page views without cookies or personal data.
 
 ## Current scope
 
