@@ -102,16 +102,6 @@ Important implementation paths:
 - GitHub authentication and private profiles are intentionally out of scope.
 - The project is a guided editor, not a drag-and-drop visual builder.
 
-## Challenge submission checklist
-
-- [x] Elements is a core part of the project.
-- [x] Complete source code and setup instructions are included.
-- [ ] Add final screenshots or a GIF of the rendered email.
-- [ ] Make this repository public.
-- [ ] Star or otherwise support the [Unlayer Elements repository](https://github.com/unlayer/elements).
-- [ ] Submit the official challenge form.
-- [ ] Share the project publicly with `#BuiltWithElements`.
-
 Built with [Unlayer Elements](https://unlayer.com/elements) for the [Build with Elements Challenge](https://x.com/unlayer/status/2077304476382142484?s=20).
 
 ## License
