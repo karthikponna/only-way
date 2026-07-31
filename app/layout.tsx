@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "RepoReady — GitHub to Cold Email",
-    template: "%s — RepoReady",
+    default: "Only Way — GitHub to Cold Email",
+    template: "%s — Only Way",
   },
   description:
     "Turn a public GitHub profile into an editable cold email rendered with Unlayer Elements.",
@@ -17,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

@@ -19,7 +19,7 @@ function headers(): HeadersInit {
   const result: HeadersInit = {
     Accept: "application/vnd.github+json",
     "X-GitHub-Api-Version": "2022-11-28",
-    "User-Agent": "RepoReady-Cold-Email",
+    "User-Agent": "OnlyWay-Cold-Email",
   };
 
   if (process.env.GITHUB_TOKEN) {

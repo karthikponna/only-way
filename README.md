@@ -1,13 +1,13 @@
-# RepoReady
+# Only Way
 
 Turn a public GitHub profile into an editable cold email.
 
-RepoReady is a submission for Unlayer’s **Build with Elements Challenge**. [Unlayer Elements](https://docs.unlayer.com/elements) is the core rendering layer for the email preview and exported HTML.
+Only Way is a submission for Unlayer’s **Build with Elements Challenge**. [Unlayer Elements](https://docs.unlayer.com/elements) is the core rendering layer for the email preview and exported HTML.
 
 ## What it does
 
 1. Enter any public GitHub username.
-2. RepoReady fetches the account’s public name and profile.
+2. Only Way fetches the account’s public name and profile.
 3. Add a target company and edit the subject or message.
 4. Preview the actual Elements-rendered email.
 5. Copy the plain-text email or download email-ready HTML.
@@ -32,6 +32,7 @@ The sandboxed preview iframe displays the same Elements HTML that users download
 - Unlayer React Elements
 - GitHub REST API
 - Zod validation
+- Vercel Web Analytics
 - Vitest
 
 ## Run locally
@@ -67,6 +68,20 @@ npm run build      # production build
 npm start          # production server
 ```
 
+## Deploy to Vercel
+
+1. Push this repository to GitHub.
+2. In the [Vercel dashboard](https://vercel.com/new), choose **Add New → Project** and import the repository.
+3. Keep the detected Next.js defaults for framework, build command, and output directory.
+4. Optionally add the `GITHUB_TOKEN` environment variable for a higher GitHub rate limit.
+5. Click **Deploy**.
+
+### Web Analytics
+
+Traffic is tracked with [Vercel Web Analytics](https://vercel.com/docs/analytics). The `<Analytics />` component from `@vercel/analytics` is mounted in `app/layout.tsx`, so every route reports page views once analytics is enabled.
+
+To turn it on, open the project in Vercel, go to the **Analytics** tab, and enable **Web Analytics**. Data appears after the next deployment receives production traffic.
+
 ## Architecture
 
 ```text
@@ -91,10 +106,11 @@ Important implementation paths:
 ## Safety and privacy
 
 - Only public GitHub profile data is requested.
-- RepoReady has no database and does not persist profile or editor data.
+- Only Way has no database and does not persist profile or editor data.
 - User payloads are length-limited and validated before rendering.
 - User-authored text is escaped by the Elements renderer.
 - Preview iframes use a restrictive sandbox.
+- Web Analytics collects aggregate page views without cookies or personal data.
 
 ## Current scope
 
