@@ -4,6 +4,8 @@ Turn a public GitHub profile into an editable cold email.
 
 Only Way is a submission for Unlayer’s **Build with Elements Challenge**. [Unlayer Elements](https://docs.unlayer.com/elements) is the core rendering layer for the email preview and exported HTML.
 
+![Only Way landing page](assets/landing.png)
+
 ## What it does
 
 1. Enter any public GitHub username.
